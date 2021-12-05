@@ -2,6 +2,11 @@
 
 header {
     color: white;
+    background-image: url(/images/header.jpg);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
 }
 #logo {
     margin-top: 70px;
@@ -9,8 +14,14 @@ header {
 }
 
 body {
-    background-color: black;
     color: white;
+}
+
+
+/* Main */
+
+h2 {
+    font-size: 48px;
 }
 
 /*      Navigation      */
@@ -45,15 +56,61 @@ body {
 }
 #skills {
     margin-left: 700px;
+    margin-bottom: 300px;
     display: flex;
     border-top: 2px solid white;
 }
 #skillsH {
     margin-left: 700px;
 }
-#wrapper {
-    margin: 50px;
-}
+
 /* Portfolio */
+
+#portfolio {
+    margin-top: 20px;
+    background-image: url(/images/project.jpg);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+.portBox {
+    margin: 70px;
+}
+
+/* Experience */
+#experience {
+    color: white;
+    background-image: url(/images/experience.png);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+/* About */
+#about {
+    color: white;
+    background-image: url(/images/about.jpg);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    font-size: 28px;
+    text-align: center;
+}
+
+/* Contact */
+
+#contact {
+    color: white;
+    background-image: url(/images/contact.jpg);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+}
+
+
 
 
