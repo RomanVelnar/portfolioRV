@@ -90,6 +90,7 @@ h2 {
     height: 100vh;
     width: 100vw;
     background-attachment: fixed;
+    padding: 40px;
 }
 .portBox {
     margin: 70px;
@@ -103,19 +104,43 @@ h2 {
     height: 100vh;
     width: 100vw;
     background-attachment: fixed;
-    padding: 5px;
+    padding: 40px;
 }
-.expBox {
-    border: 4px solid white;
+
+span {
+    padding: 10px;
+    border: 10px solid white;
     border-radius: 30px 15px;
-    margin: 5px;
-    padding: 5px;
+    display: inline-block;
+    float: left;
+    background-color:black;
+    margin-left: 50px;
+    cursor: pointer; 
 }
-.expBox p {
-    font-size: 16px;
+
+div.expBox {
+    overflow: hidden;
+    background-color: aqua;
 }
-.expBox h4 {
-    font-size: 20px;
+
+div.expBox .box {
+    background-color: inherit;
+    float: left;
+    cursor: pointer;
+}
+
+div.expBox .box:hover{
+    background-color: lightblue;
+}
+
+div.expBox .box.active {
+    background-color: lightgrey;
+}
+
+.boxContent {
+    display: none;
+    margin-top: 200px;
+    background-color: blue;
 }
 
 
