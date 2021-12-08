@@ -1,26 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <title>Roman Velnar</title>
     <meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="assets/css/main.css">
-
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&display=swap" rel="stylesheet">
 
 </head>
 <body>
         <header>
+            <div class="logo">
             <a href="#"><img src="images/Logo.PNG" id="logo"></a>
+            </div>
+            <button class="navToggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
             <nav class="navbar">
-                <ul>
-                   <a href="#">Home</a>
-                   <a href="#about">About</a>
-                   <a href="#portfolio">Portfolio</a>
-                   <a href="#experience">Work experience</a>
-                   <a href="#contact">Contact</a>
+                <ul class="navbarList">
+                   <li class="navbarItem"><a href="#">Home</a></li>
+                   <li class="navbarItem"><a href="#about">About</a></li>
+                   <li class="navbarItem"><a href="#portfolio">Portfolio</a></li>
+                   <li class="navbarItem"><a href="#experience">Work experience</a></li>
+                   <li class="navbarItem"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <h2 id="webDev">Software Developer</h2>
+            <!-- <h2 id="webDev">Software Developer</h2>
             <h3 id="skillsH">Skills:</h3>
             <div id="skills">
                 <ul>
@@ -34,44 +40,83 @@
                     <li>MySQL</li>
                     <li>SQL</li>
                 </ul>
-            </div>
-            <br>
+            </div> -->
         </header>
+
+<!-- Introduction -->
+
+        <section class="intro" id="home">    
+            <h1 class="sectionTitle sectionTitle--intro">Hello, I am <strong>Roman Velnar</strong></h1>
+            <p class="sectionSubtitle sectionSubtitle--intro">Web developer</p>
+            <img class="introImg" src="/images/header.jpg" alt="">
+        </section>
+
         <button onclick="buttonFunction()" id="buttonTop" title="Scroll to the top">Scroll to the top</button>
-           <!-- About -->
-        <div id="about">
-                <h2>About</h2>
-                <p>Software Developer with the master’s degree in Information Technology, who dedicated every spare minute in the last year to be proficient at his new career path. Very good with adapting to change and new situations, with a constant thrive to learn something new. Various professional roles have helped being a team oriented, problem solving person with great communication skills. </p>
+
+<!-- About -->
+
+        <section class="aboutMe" id="about">
+            <div id="about">
+            <h2 class="sectionTitle sectionTitle--about">Who I am</h2>
+            <p class="sectionSubtitle sectionSubtitle--about">Software Developer with the master’s degree in Information Technology, who dedicated every spare minute in the last year to be proficient at his new career path. Very good with adapting to change and new situations, with a constant thrive to learn something new. Various professional roles have helped being a team oriented, problem solving person with great communication skills. </p>
+
+            <div class="aboutMe--body">
+                <p></p>
+                <p></p>
             </div>
-            <!-- Portfolio -->
-            <div id="portfolio">
-                <h2>Software development portfolio</h2>
-                <div class="portBox">
-                    <h3>Bonsaider</h3>
-                    <p>Mobile application for managing Bonsai trees</p>
-                    <p>Developed using XXXX</p>
+            </div>
+        </section>
+
+<!-- Portfolio -->
+
+            <section class="myPortfolio" id="portfolio">
+                <h2 class="sectionTitle">Software development portfolio</h2>
+                <div class="boxHolder">
+                    <a href="#" class="box">
+                        <img src="/images/bonsaider.jpg" alt="Bonsaider, mobile application to manage Bonsai trees" class="boxImage">
+                    </a>
+                    <a href="#" class="box">
+                        <img src="/images/portfolio.jpg" alt="Web portfolios" class="boxImage">
+                    </a>
+                    <a href="#" class="box">
+                        <img src="/images/BonsaiDiversity.jpg" alt="BonsaiDiversity, wep page for Bonsai enthusiast" class="boxImage">
+                    </a>
+                    <a href="#" class="box">
+                        <img src="/images/other.jpg" alt="Miscelanius projects" class="boxImage">
+                    </a>
                 </div>        
-                <div class="portBox">
-                    <h3>Creating web portfolios</h3>
-                    <p>Different web portfolios</p>
-                    <p>Developed using HTML, CSS and JavaScript</p>
-                </div> 
-                <div class="portBox">
-                    <h3>BonsaiDiversity</h3>
-                    <p>Website providing tips for Bonsai care</p>
-                    <p>Developed using HTML, CSS and JavaScript</p>
-                </div> 
-                <div class="portBox">
-                    <h3>miscelanious projects</h3>
-                    <p>Part of development courses</p>
-                    <p>Developed using HTML, CSS, JavaScript libraries</p>
-                </div>         
-            </div>
-            <br>
+            </section>
 
-            <!-- experience containers -->
+<!-- experience containers -->
 
-            <div id="experience">
+            <section class="experience" id="myExperience">
+                <h2 class="sectionTitle sectionTitleexperience">My previous work experiences</h2>
+                <div class="expBox">
+                    <div class="box">
+                        <h3>Business Development Manager</h3>
+                        <p>Think Pipeline Ltd</p>                                
+                    </div>
+                    <div class="box">
+                        <h3>Insurance Consultant</h3>
+                        <p>DBS - Aegon contract</p>                                
+                    </div>
+                    <div class="box">
+                        <h3>Senior Technical support specialist</h3>
+                        <p>WDS - Google/Android contract</p>                                
+                    </div>
+                </div>
+                <a href="work" class="btn">My experience</a>
+            </section>
+
+
+
+
+
+
+
+
+
+            <!-- <div id="experience">
                 <h2>Work experience</h2>
                 <p><b>Worked in various environment and teams, makes me a very adaptable to new situations</b></p>
                 <p>previous work:</p>
@@ -96,11 +141,10 @@
                         </span>
                     </div>
                 </div>
-                <br>
                 <div class="boxContent" id="box1">
                     <span>
                     <ul>
-                        <p><b>From 2017 - present</b><br> in Bournemouth</p>
+                        <p><strong>From 2017 - present</strong><br> in Bournemouth</p>
                         <p>Think Pipeline Ltd is a new business development and lead generation company for the IT sector. The responsibilities:</p>
                         <li>Managing the German speaking team</li>
                         <li>Communication and negotiating with vendors (Dell, HP, Cisco, Oracle, Barracuda, AWS and others)</li>
@@ -114,7 +158,7 @@
                 <div class="boxContent" id="box2">
                     <span>
                     <ul>
-                        <p><b>From 2016 - 2017</b><br>in Bournemouth</p>
+                        <p><strong>From 2016 - 2017</strong><br>in Bournemouth</p>
                         <p>DBF (Data Base Factory) offers contact centre services and works with several companies, including Aegon, insurance company. The responsibilities:</p>
                         <li>Helping clients with their queries</li>
                         <li>Amending clients policies</li>
@@ -125,7 +169,7 @@
 
                 <div class="boxContent" id="box3">
                     <span>
-                    <ul><p><b>From 2015 - 2016</b><br>in Bournemouth</p>
+                    <ul><p><strong>From 2015 - 2016</strong><br>in Bournemouth</p>
                         <p>Conduent, company that works with Google and provides technical support for Android OS and other Google products, such as Pay, YouTube and Nexus.</p>
                         <li>Troubleshooting Android apps and Google services</li>
                         <li>Technical support for Nexus phone line</li>
@@ -134,10 +178,10 @@
                     </ul>
                     </span>
                 </div>
-                <br> 
-            </div> 
-            <br>
+            </div>  -->
+
             <!-- Contact -->
+
             <div id="contact">
                 <h2>Contact</h2>
                 <p>Roman Velnar</p><br>
@@ -146,6 +190,16 @@
                 <a href="">GitHub</a>
                 <a href="">LinkedIn</a>
             </div>
+            <footer>
+                <a href="mailto:roman.velnar@gmail.com" class="footerLink">roman.velnar@gmail.com</a>
+                <ul class="socialList">
+                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                </ul>
+            </footer>
         <script src="/assets/js/main.js"></script>
 </body>
 </html>

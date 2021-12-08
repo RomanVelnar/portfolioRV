@@ -1,29 +1,271 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
 
-header {
+:root {
+    /* font */
+    --ff-primary:'Lobster', sans-serif;
+    --ff-secondary:'Architects Daughter', monospace;
+    /* font weigth */
+    --fw-reg: 300;
+    --fw-bold: 900;
+    /* colour */
+    --clr-light: #fff;
+    --clr-dark: black;
+    --clr-accent: green;
+    /* font size */
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25), 
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+    /* Media query */
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+
+/* General styles */
+
+/* header {
     color: white;
     background-image: url(/images/header.jpg);
     background-repeat: repeat, no-repeat;
     height: 100vh;
     width: 100vw;
     background-attachment: fixed;
+    font-family: 'Lobster', cursive;
 }
 #logo {
     margin-top: 70px;
     margin-left: 70px;
-}
+} */
 
 body {
-    color: white;
+    background: var(--clr-dark);
+    color: var(--clr-light);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    /* background-image: url("/images/header.jpg");
+    background-repeat: no-repeat, repeat;
+    background-color: #cccccc;   
+    background-size: auto;
+    background-attachment: fixed; */
+}
+
+section {
+    padding: 5em 2em;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+strong {font-weight: var(--fw-bold)}
+
+:focus {
+    outline: 3px solid var(--clr-accent);
+    outline-offset: 3px;
+}
+
+/* Buttons */
+
+.btn {
+    display: inline-block;
+    padding: .5em 2.5em;
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.1);
 }
 
 
-/* Main */
+/* Typography */
 
-h2 {
-    font-size: 48px;
+h1, 
+h2, 
+h3 {
+    line-height: 1;
+    margin: 0;
 }
-#buttonTop {
+
+h1 {font-size: var(--fs-h1) }
+h2 {font-size: var(--fs-h2) }
+h3 {font-size: var(--fs-h3) }
+
+.sectionTitle {
+    margin-bottom: .25rem;
+}
+.sectionTitle--intro {
+    font-weight: var(--fw-reg);
+}
+
+.sectionTitle--intro {
+    display: block;
+}
+
+.sectionSubtitle {
+    margin: 0;
+    font-size: var(--fs-h3);
+}
+
+.sectionSubtitle--intro,
+.sectionSubtitle--about {
+    background: var(--clr-accent);
+    padding:  .25em 1em;
+    font-family: var(--ff-secondary);
+    margin-bottom: 1em;
+}
+
+/* Header */
+
+nav {
+    display: none;
+}
+
+/* Intro section */
+
+.intro {
+    position: relative;
+    /* right: 300px;
+    top: 100px; */
+
+}
+
+.introImg {
+    box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+    .intro {
+        display: grid;
+        width: min-content;
+        margin: 0 auto;
+        grid-column-gap: 1em;
+        grid-template-areas: "img title" "img subtitle";
+        grid-template-columns: min-content max-content;
+    }
+
+    .introImg {
+        grid-area: img;
+        min-width: 250px;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sectionSubtitle--intro {
+        align-self: start;
+        grid-column: -1 / 1;
+        grid-row: 2;
+        text-align: right;
+        position: relative;
+        left: -1.5em;
+        width: calc(100% + 1.5em);
+    }
+}
+
+/* Experience */
+
+.experience {
+    background-color: var(--clr-dark);
+    background-image: url(/images/experience.png);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+}
+
+.sectionTitleexperience {
+    content: '';
+    display: block;
+    width: 3em;
+    height: 1px;
+    margin: 0.5em auto 1em;
+    background: var(--clr-light);
+    opacity: 0.25;
+}
+
+.sectionTitle {
+    color: var(--clr-accent);
+    position: relative;
+}
+
+.expBox {
+    margin-bottom: 4em;
+}
+
+.box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (min-width: 800px) {
+    .box {
+        display: flex;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .box + .box {
+        margin-left: 2em;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    /* Main */
+
+/* #buttonTop {
     position: fixed;
     bottom: 25px;
     right: 35px;
@@ -36,18 +278,20 @@ h2 {
     padding: 20px;
     border-radius: 15px;
     font-size: 18px;
+    font-family: 'Lobster', cursive;
 }
 #buttonTop:hover {
     background-color: aqua;
 }
 
-/*      Navigation      */
-.navbar {
+    /*      Navigation      */
+/* .navbar {
     display: block;
     height: 50px;
     line-height: 50px;
     display: inline-block;
     width: 100%;
+    font-family: 'Lobster', cursive;
     }
     .navbar ul {
         list-style: none;
@@ -79,11 +323,11 @@ h2 {
 }
 #skillsH {
     margin-left: 700px;
-}
+}  */
 
-/* Portfolio */
+    /* Portfolio */
 
-#portfolio {
+/* #portfolio {
     margin-top: 20px;
     background-image: url(/images/project.jpg);
     background-repeat: repeat, no-repeat;
@@ -91,13 +335,14 @@ h2 {
     width: 100vw;
     background-attachment: fixed;
     padding: 40px;
+    font-family: 'Lobster', cursive;
 }
 .portBox {
     margin: 70px;
-}
+} */
 
-/* Experience */
-#experience {
+    /* Experience */
+/* #experience {
     color: white;
     background-image: url(/images/experience.png);
     background-repeat: repeat, no-repeat;
@@ -105,11 +350,12 @@ h2 {
     width: 100vw;
     background-attachment: fixed;
     padding: 40px;
+    font-family: 'Lobster', cursive;
 }
 
 span {
     padding: 10px;
-    border: 10px solid white;
+    border: 2px solid white;
     border-radius: 30px 15px;
     display: inline-block;
     float: left;
@@ -135,17 +381,17 @@ div.expBox .box:hover{
 
 div.expBox .box.active {
     background-color: lightgrey;
-}
+} */
 
-.boxContent {
+/* .boxContent {
     display: none;
     margin-top: 200px;
     background-color: blue;
-}
+} */
 
 
-/* About */
-#about {
+    /* About */
+/* #about {
     color: white;
     background-image: url(/images/about.jpg);
     background-repeat: repeat, no-repeat;
@@ -154,18 +400,20 @@ div.expBox .box.active {
     background-attachment: fixed;
     font-size: 28px;
     text-align: center;
-}
+    font-family: 'Lobster', cursive;
+} */
 
-/* Contact */
+    /* Contact */
 
-#contact {
+/* #contact {
     color: white;
     background-image: url(/images/contact.jpg);
     background-repeat: repeat, no-repeat;
     height: 100vh;
     width: 100vw;
     background-attachment: fixed;
-}
+    font-family: 'Lobster', cursive;
+} */
 
 
 

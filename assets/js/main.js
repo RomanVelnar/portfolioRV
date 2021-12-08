@@ -1,4 +1,4 @@
-// button //
+// button 
 mybutton = document.getElementById("buttonTop");
 
 window.onscroll = function() {getButton()};
@@ -16,6 +16,7 @@ function buttonFunction() {
     document.documentElement.scrollTop = 0;
 }
 
+// Open box 
 function openBox(e, boxId){
     var i, boxContent, box;
     
