@@ -12,18 +12,18 @@
 <body>
         <header>
             <div class="logo">
-            <a href="#"><img src="images/Logo.PNG" id="logo"></a>
+            <img src="images/Logo.PNG" id="logo">
             </div>
             <button class="navToggle" aria-label="toggle navigation">
                 <span class="hamburger"></span>
             </button>
             <nav class="navbar">
                 <ul class="navbarList">
-                   <li class="navbarItem"><a href="#">Home</a></li>
-                   <li class="navbarItem"><a href="#about">About</a></li>
-                   <li class="navbarItem"><a href="#portfolio">Portfolio</a></li>
-                   <li class="navbarItem"><a href="#experience">Work experience</a></li>
-                   <li class="navbarItem"><a href="#contact">Contact</a></li>
+                   <li class="navbarItem"><a href="#home" class="navbarLink">Home</a></li>
+                   <li class="navbarItem"><a href="#about" class="navbarLink">About</a></li>
+                   <li class="navbarItem"><a href="#portfolio" class="navbarLink">Portfolio</a></li>
+                   <li class="navbarItem"><a href="#experience" class="navbarLink">Work experience</a></li>
+                   <li class="navbarItem"><a href="#contact" class="navbarLink">Contact</a></li>
                 </ul>
             </nav>
             <!-- <h2 id="webDev">Software Developer</h2>
@@ -56,23 +56,23 @@
 <!-- About -->
 
         <section class="aboutMe" id="about">
-            <div id="about">
             <h2 class="sectionTitle sectionTitle--about">Who I am</h2>
-            <p class="sectionSubtitle sectionSubtitle--about">Software Developer with the master’s degree in Information Technology, who dedicated every spare minute in the last year to be proficient at his new career path. Very good with adapting to change and new situations, with a constant thrive to learn something new. Various professional roles have helped being a team oriented, problem solving person with great communication skills. </p>
+            <p class="sectionSubtitle sectionSubtitle--about">Software Developer with the master’s degree in Information Technology.</p>
 
             <div class="aboutMe--body">
-                <p></p>
-                <p></p>
+                <p>Dedicated every spare minute in the last year to be proficient at his new career path. Very good with adapting to change and new situations, with a constant thrive to learn something new.</p>
+                <p>Various professional roles have helped being a team oriented, problem solving person with great communication skills.</p>
             </div>
-            </div>
+            <img src="/images/project.jpg" alt="About me" class="aboutMeImg">
         </section>
 
 <!-- Portfolio -->
 
             <section class="myPortfolio" id="portfolio">
-                <h2 class="sectionTitle">Software development portfolio</h2>
+                <h2 class="sectionTitle sectionTitle--port">Software development portfolio</h2>
+                <p class="sectionSubtitle sectionSubtitle--port">What have I done so far</p>
                 <div class="boxHolder">
-                    <a href="#" class="box">
+                    <a href="portfolio.html" class="box">
                         <img src="/images/bonsaider.jpg" alt="Bonsaider, mobile application to manage Bonsai trees" class="boxImage">
                     </a>
                     <a href="#" class="box">
@@ -190,16 +190,16 @@
                 <a href="">GitHub</a>
                 <a href="">LinkedIn</a>
             </div>
-            <footer>
+            <footer class="footer">
                 <a href="mailto:roman.velnar@gmail.com" class="footerLink">roman.velnar@gmail.com</a>
                 <ul class="socialList">
-                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
-                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
-                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
-                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
-                    <li class="socialListItem"><a href="" class="socialListLink"></a></li>
+                    <li class="socialListItem"><a href="https://www.linkedin.com/in/roman-velnar-3a49a542/" class="socialListLink"><i class="fab fa-linkedin"></i></a></li>
+                    <li class="socialListItem"><a href="https://github.com/RomanVelnar" class="socialListLink"><i class="fab fa-github"></i></a></li>
+                    <li class="socialListItem"><a href="https://codepen.io/your-work/" class="socialListLink"><i class="fab fa-codepen"></i></a></li>
+                    <li class="socialListItem"><a href="https://dribbble.com/RomanVelnar" class="socialListLink"><i class="fab fa-dribbble"></i></a></i></li>
                 </ul>
             </footer>
         <script src="/assets/js/main.js"></script>
+        <script src="https://kit.fontawesome.com/cde66194c5.js" crossorigin="anonymous"></script>
 </body>
 </html>
