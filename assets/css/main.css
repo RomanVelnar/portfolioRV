@@ -28,7 +28,7 @@
 
     /* Media query */
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     :root {
         --fs-h1: 4.5rem;
         --fs-h2: 3.75rem;
@@ -74,9 +74,11 @@ html, body {
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 1em;
     height: 100%;
     width: 100%;
+    left: 50%;
+    right: 10%;
 }
 
 img{
@@ -127,7 +129,7 @@ span.fade {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-accent);
     color: var(--clr-light);
     cursor: pointer;
     padding: 20px;
@@ -214,6 +216,10 @@ nav {
     font-size: var(--fs-h4);
 }
 
+.navbarLink {
+    color: var(--clr-light);
+}
+
 .burger {
     display: none;
     cursor: pointer;
@@ -221,7 +227,7 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: var(--clr-dark);
+    background-color: var(--clr-light);
     margin: 5px;
     transition: all 0.3s ease;
 }
@@ -243,6 +249,7 @@ nav {
         height: 92vh;
         top: 8vh;
         background-color: var(--clr-accent);
+        color: var(--clr-light);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -252,7 +259,7 @@ nav {
         transition: transform 0.5s ease-in;
     }
     .navbarList li {
-        opacity: 0;
+        opacity: 1;
     }
     .burger {
         display: block;
@@ -404,13 +411,14 @@ nav {
 /* Intro section */
 
 .intro {
-    position: relative;
-
-
-    /* right: 300px;
-    top: 100px; */
-
+    background-color: var(--clr-light);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+    height: 100%;
+    width: 100%;
 }
+
 
 .introImg {
     box-shadow: var(--bs);
@@ -419,11 +427,11 @@ nav {
 @media (min-width: 600px) {
     .intro {
         display: grid;
-        width: min-content;
+        width: 100%;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: "img title" "img subtitle";
-        grid-template-columns: max-content min-content;
+        grid-template-columns: auto auto;
     }
 
     .introImg {
@@ -431,6 +439,9 @@ nav {
         min-width: 250px;
         position: relative;
         z-index: 2;
+    }
+    .sectionTitle--intro {
+        top: 40%;
     }
 
     .sectionSubtitle--intro {
@@ -454,15 +465,15 @@ nav {
     color: var(--clr-light);
 }
 
-.sectionTitleexperience {
+/* .sectionTitleexperience {
     content: '';
     display: block;
-    width: 3em;
+    width: 1em;
     height: 1px;
     margin: 0.5em auto 1em;
     background: var(--clr-light);
-    opacity: 0.25;
-}
+    opacity: .90;
+} */
 
 .sectionTitle {
     color: var(--clr-accent);
@@ -470,16 +481,19 @@ nav {
 }
 
 .expBox {
+    margin-top: 4em;
     margin-bottom: 4em;
+    display: flex;
+
 }
 
-.box {
+.expBoxBox {
     max-width: 500px;
     margin: 0 auto;
 }
 
 @media (min-width: 800px) {
-    .box {
+    .expBoxBox {
         display: flex;
         max-width: 1000px;
         margin: 0 auto;
@@ -487,7 +501,7 @@ nav {
         margin-right: auto;
     }
 
-    .box + .box {
+    .expBoxBox + .expBoxBox {
         margin-left: 2em;
     }
 }
@@ -495,12 +509,18 @@ nav {
 /* About me */
 
 .aboutMe {
-    max-width: 1000px;
+
     margin: 0 auto;
+    background-color: var(--clr-light);
+    background-image: url(/images/about.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
 }
 
 .aboutMeImg {
     box-shadow: var(--bs);
+    top: 20%;
 }
 
 @media (min-width: 600px) {
@@ -538,6 +558,7 @@ nav {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     text-align: center;
+    height: auto;
 }
 
 .sectionSubtitle--port {
@@ -776,15 +797,13 @@ div.expBox .box.active {
 
     /* Contact */
 
-/* #contact {
-    color: white;
+#contact {
+    background-color: var(--clr-light);
     background-image: url(/images/contact.jpg);
-    background-repeat: repeat, no-repeat;
-    height: 100vh;
-    width: 100vw;
-    background-attachment: fixed;
-    font-family: 'Lobster', cursive;
-} */
+    background-size: cover;
+    background-blend-mode: multiply;
+    color: var(--clr-light);
+}
 
 
 
