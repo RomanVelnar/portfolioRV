@@ -43,21 +43,21 @@ const navSlide = () => {
 navSlide();
 
 // Open box 
-// function openBox(e, boxId){
-//     var i, boxContent, box;
+function openBox(e, boxId){
+    var i, boxContent, expBoxBox;
     
-//     boxContent = document.getElementsByClassName('boxContent');
-//     for(i=0; i<boxContent.length; i++){
-//         boxContent[i].style.display = "none";
-//     }
-//     box = document.getElementsByClassName('box');
-//     for(i=0; i<box.length; i++){
-//         box[i].className = box[i].className.replace('active', "")
-//     }
+    boxContent = document.getElementsByClassName('boxContent');
+    for(i=0; i<boxContent.length; i++){
+        boxContent[i].style.display = "none";
+    }
+    expBoxBox = document.getElementsByClassName('expBoxBox');
+    for(i=0; i<expBoxBox.length; i++){
+        expBoxBox[i].className = expBoxBox[i].className.replace('active', "")
+    }
 
-//     document.getElementById(boxId).style.display = "block";
-//     e.currentTarget.className += 'active';
-// };
+    document.getElementById(boxId).style.display = "block";
+    e.currentTarget.className += 'active';
+};
 
 // Navigation
 

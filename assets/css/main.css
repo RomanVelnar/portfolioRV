@@ -6,7 +6,7 @@
 
 :root {
     /* font */
-    --ff-primary:'Lobster', sans-serif;
+    --ff-primary:'Paytone One', sans-serif;
     --ff-secondary:'Architects Daughter', monospace;
     /* font weigth */
     --fw-reg: 300;
@@ -75,7 +75,7 @@ html, body {
 
 section {
     padding: 3em 1em;
-    height: 100%;
+    min-height: 800px;
     width: 100%;
     left: 50%;
     right: 10%;
@@ -104,7 +104,7 @@ span.fade {
 
 /* Buttons */
 
-.btn {
+/* .btn {
     display: inline-block;
     padding: .5em 2.5em;
     background: var(--clr-accent);
@@ -120,7 +120,7 @@ span.fade {
 
 .btn:hover {
     transform: scale(1.1);
-}
+} */
 
 #buttonTop {
     position: fixed;
@@ -213,7 +213,8 @@ nav {
     text-decoration: none;
     letter-spacing: 3px;
     font-weight: var(--fw-bold);
-    font-size: var(--fs-h4);
+    font-size: var(--fs-h3);
+    margin-left: 2em;
 }
 
 .navbarLink {
@@ -475,26 +476,48 @@ nav {
     opacity: .90;
 } */
 
+.sectionTitleexperience {
+    color: var(--clr-dark);
+    text-align: center;
+    margin: .25em;
+}
+
 .sectionTitle {
     color: var(--clr-accent);
     position: relative;
+    text-align: center;
+}
+
+.sectionSubTitle--exp {
+    text-align: center;
 }
 
 .expBox {
     margin-top: 4em;
     margin-bottom: 4em;
-    display: flex;
-
+    display: grid;
+    cursor: pointer;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .expBoxBox {
-    max-width: 500px;
+    max-width: auto;
+    min-width: 330px; 
     margin: 0 auto;
+    box-shadow: var(--bs);
+    padding: 30px;
+    border-radius: 1rem;
+    background-color: var(--clr-accent);
+    opacity: .8;
+    height: 100%;
+    grid-gap: 2rem;
+    overflow: hidden;
 }
+
 
 @media (min-width: 800px) {
     .expBoxBox {
-        display: flex;
+        /* display: flex; */
         max-width: 1000px;
         margin: 0 auto;
         margin-left: auto;
@@ -504,6 +527,56 @@ nav {
     .expBoxBox + .expBoxBox {
         margin-left: 2em;
     }
+}
+
+/* #experience {
+    color: white;
+    background-image: url(/images/experience.png);
+    background-repeat: repeat, no-repeat;
+    height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    padding: 40px;
+    font-family: 'Lobster', cursive;
+} */
+
+/* span {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 30px 15px;
+    display: inline-block;
+    float: left;
+    background-color:black;
+    margin-left: 50px;
+    cursor: pointer; 
+} */
+
+div.expBox {
+    overflow: hidden;
+}
+
+div.expBox .expBoxBox {
+    background-color: var(--clr-accent);
+    float: left;
+    cursor: pointer;
+}
+
+div .expBox .expBoxBox:hover{
+    background-color: var(--clr-accent);
+}
+
+div .expBox .expBoxBox.active {
+    background-color: var(--clr-accent);
+} 
+
+.boxContent {
+    display: none;
+    margin-top: 5em;
+    height: auto;
+    box-shadow: var(--bs);
+    border-radius: 1rem;
+    background-color: var(--clr-dark);
+    opacity: 0.8;
 }
 
 /* About me */
@@ -569,7 +642,7 @@ nav {
 
 .boxHolder {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .box {
@@ -598,7 +671,7 @@ nav {
     background: #111;
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em 0;
+    padding: 1.5em 0;
     font-size: var(--fs-h3);
 }
 
@@ -623,7 +696,7 @@ nav {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin: 2em 0;
+    margin: 1em 0;
     padding: 0;
 }
 
@@ -633,6 +706,7 @@ nav {
 
 .socialListLink {
     padding: .5em;
+    font-size: 50px;
 }
 
 .portfolioItemIndividual {
@@ -734,52 +808,7 @@ nav {
 } */
 
     /* Experience */
-/* #experience {
-    color: white;
-    background-image: url(/images/experience.png);
-    background-repeat: repeat, no-repeat;
-    height: 100vh;
-    width: 100vw;
-    background-attachment: fixed;
-    padding: 40px;
-    font-family: 'Lobster', cursive;
-}
 
-span {
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 30px 15px;
-    display: inline-block;
-    float: left;
-    background-color:black;
-    margin-left: 50px;
-    cursor: pointer; 
-}
-
-div.expBox {
-    overflow: hidden;
-    background-color: aqua;
-}
-
-div.expBox .box {
-    background-color: inherit;
-    float: left;
-    cursor: pointer;
-}
-
-div.expBox .box:hover{
-    background-color: lightblue;
-}
-
-div.expBox .box.active {
-    background-color: lightgrey;
-} */
-
-/* .boxContent {
-    display: none;
-    margin-top: 200px;
-    background-color: blue;
-} */
 
 
     /* About */
@@ -803,7 +832,47 @@ div.expBox .box.active {
     background-size: cover;
     background-blend-mode: multiply;
     color: var(--clr-light);
+    text-align: center;
+    
 }
+
+.contactMain {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 5em;
+}
+
+.contactCont1 {
+    max-width: 850px;
+	background-color: var(--clr-dark);
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    opacity: .8;
+}
+
+.contactCont1 h4 {
+    padding: 1em;
+}
+
+.contactCont2 {
+    max-width: 850px;
+	display: grid;
+	grid-template-columns: 2fr, 1fr;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: var(--clr-dark);
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+    opacity: .8;
+}
+
+.contactForm {
+    margin: 2em;
+}
+
+.form-control {
+    width: 100%;
+}
+
 
 
 

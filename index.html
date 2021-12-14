@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="assets/css/main.css">
         <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Luckiest+Guy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Lobster&family=Luckiest+Guy&family=Paytone+One&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -58,7 +60,7 @@
 <!-- About -->
 
         <section class="aboutMe" id="about">
-            <h2 class="sectionTitle sectionTitle--about">Who I am</h2>
+            <h2 class="sectionTitle sectionTitle--about">Who am I</h2>
             <p class="sectionSubtitle sectionSubtitle--about">Software Developer with the master’s degree in Information Technology.</p>
 
             <div class="aboutMe--body">
@@ -92,56 +94,24 @@
 <!-- experience containers -->
 
             <section class="experience" id="myExperience">
-                <h2 class="sectionTitle sectionTitleexperience">My previous work experiences</h2>
+                <h2 class=" sectionTitleexperience">My previous work experiences</h2>
+                <h3 class="sectionSubTitle--exp">Click on the boxes below for more Information</h3>
                 <div class="expBox">
-                    <div class="expBoxBox">
+                    <article class="expBoxBox active" onclick="openBox(event, 'box1')">
                         <h3>Business Development Manager</h3>
-                        <p>Think Pipeline Ltd</p>                                
-                    </div>
-                    <div class="expBoxBox">
+                        <p>Think Pipeline Ltd</p>
+                        <p>Bournemouth</p>                    
+                    </article>
+                    <article class="expBoxBox active" onclick="openBox(event, 'box2')">
                         <h3>Insurance Consultant</h3>
-                        <p>DBS - Aegon contract</p>                                
-                    </div>
-                    <div class="expBoxBox">
+                        <p>DBS - Aegon contract</p>  
+                        <p>Ringwood</p>                              
+                    </article>
+                    <article class="expBoxBox active" onclick="openBox(event, 'box3')">
                         <h3>Senior Technical support specialist</h3>
-                        <p>WDS - Google/Android contract</p>                                
-                    </div>
-                </div>
-                <a href="work" class="btn">My experience</a>
-            </section>
-
-
-
-
-
-
-
-
-
-            <!-- <div id="experience">
-                <h2>Work experience</h2>
-                <p><b>Worked in various environment and teams, makes me a very adaptable to new situations</b></p>
-                <p>previous work:</p>
-                <p>Click for more info</p>
-                <div class="expbox active">
-                    <div class="box" onclick="openBox(event, 'box1')">
-                        <span>
-                            <h4>Business Development Manager</h4>
-                            <p>Think Pipeline Ltd</p>
-                        </span>
-                    </div>
-                    <div class="box" onclick="openBox(event, 'box2')">
-                        <span>
-                            <h4>Insurance consultant</h4>
-                            <p>DBS - Aegon contract</p>
-                        </span>
-                    </div>
-                    <div class="box" onclick="openBox(event, 'box3')">
-                        <span>
-                            <h4>Senior Technical support specialist</h4>
-                            <p>WDS - Google/Android contract</p> 
-                        </span>
-                    </div>
+                        <p>WDS - Google/Android contract</p> 
+                        <p>Bournemouth</p>                               
+                    </article>
                 </div>
                 <div class="boxContent" id="box1">
                     <span>
@@ -180,26 +150,79 @@
                     </ul>
                     </span>
                 </div>
-            </div>  -->
+            </section>
+
+
+
+
+
+
+
+
+
+                <!-- <h2>Work experience</h2>
+                <p><b>Worked in various environment and teams, makes me a very adaptable to new situations</b></p>
+                <p>previous work:</p>
+                <p>Click for more info</p>
+                <div class="expbox active">
+                    <div class="box" onclick="openBox(event, 'box1')">
+                        <span>
+                            <h4>Business Development Manager</h4>
+                            <p>Think Pipeline Ltd</p>
+                        </span>
+                    </div>
+                    <div class="box" onclick="openBox(event, 'box2')">
+                        <span>
+                            <h4>Insurance consultant</h4>
+                            <p>DBS - Aegon contract</p>
+                        </span>
+                    </div>
+                    <div class="box" onclick="openBox(event, 'box3')">
+                        <span>
+                            <h4>Senior Technical support specialist</h4>
+                            <p>WDS - Google/Android contract</p> 
+                        </span>
+                    </div>
+                </div> -->
+
+
 
             <!-- Contact -->
 
             <section id="contact">
                 <h2>Contact</h2>
-                <p>Roman Velnar</p><br>
-                <p>Email: roman.velnar@gmail.com</p>
-                <p>Phone: 07469202343</p>
-                <a href="">GitHub</a>
-                <a href="">LinkedIn</a>
-            </section>
-            <footer class="footer">
-                <a href="mailto:roman.velnar@gmail.com" class="footerLink">roman.velnar@gmail.com</a>
+                <div class="contactMain">
+                <div class="contactCont contactCont1">
+                    <h4>Roman Velnar</h4>
+                    <p>MSc Information Technology</p>
+                    <p>Living in Bournemouth/UK</p>
+                    <p>Email: roman.velnar@gmail.com</p>
+                    <p></p>
+                </div>
+                <div class="contactCont contactCont2">
+                    <form class="contactForm" action="https://formsubmit.co/roman.velnar@gmail.com" method="POST">
+                        <h4>Write me an Email</h4>
+                        <input class="ContactInput" type="text" name="name" placeholder="Full Name" required>
+                        <input class="ContactInput" type="email" name="email" placeholder="Email Address" required>
+                        <textarea class="form-control" name="message" rows="10" placeholder="Your Message"required></textarea>
+                        <button class="btn" type="submit">Send</button>
+                    </form>
+                </div>
+               </div>
+               <div class="contactCont contactCont3">
                 <ul class="socialList">
                     <li class="socialListItem"><a href="https://www.linkedin.com/in/roman-velnar-3a49a542/" class="socialListLink"><i class="fab fa-linkedin"></i></a></li>
                     <li class="socialListItem"><a href="https://github.com/RomanVelnar" class="socialListLink"><i class="fab fa-github"></i></a></li>
                     <li class="socialListItem"><a href="https://codepen.io/your-work/" class="socialListLink"><i class="fab fa-codepen"></i></a></li>
                     <li class="socialListItem"><a href="https://dribbble.com/RomanVelnar" class="socialListLink"><i class="fab fa-dribbble"></i></a></i></li>
                 </ul>
+            </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <a href="mailto:roman.velnar@gmail.com" class="footerLink">roman.velnar@gmail.com</a>
+
             </footer>
         <script src="/assets/js/main.js"></script>
         <script src="https://kit.fontawesome.com/cde66194c5.js" crossorigin="anonymous"></script>
