@@ -4,7 +4,7 @@ mybutton = document.getElementById("buttonTop");
 window.onscroll = function() {getButton()};
 
 function getButton() {
-    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
         mybutton.style.display = "block";
     } else {
         mybutton.style.display = "none";
@@ -12,11 +12,11 @@ function getButton() {
 };
 
 function buttonFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 20;
+    document.documentElement.scrollTop = 20;
 };
 
-
+// Navigation
 
 const navSlide = () => {
     const burger = document.querySelector('.burger');
@@ -36,8 +36,6 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
 
     });
-
-
 }
 
 navSlide();
@@ -58,22 +56,6 @@ function openBox(e, boxId){
     document.getElementById(boxId).style.display = "block";
     e.currentTarget.className += 'active';
 };
-
-// Navigation
-
-// const navToggle1 = document.querySelector('.navToggle');
-// const navLinks1 = document.querySelectorAll('.navbarLink');
-
-
-// navToggle1.addEventListener('click', () => {
-//     document.body.classList.toggle('navOpen');
-// });
-
-// navLinks1.forEach(link => {
-//     link.addEventListener('click', () => {
-//         document.body.classList.remove('navOpen');
-//     })
-// });
 
 
 // Text animation

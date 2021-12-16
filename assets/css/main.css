@@ -14,9 +14,9 @@
     /* colour */
     --clr-light: rgb(182, 179, 179);
     --clr-dark: rgb(37, 35, 35);
-    --clr-accent: rgb(9, 99, 9);
+    --clr-accent: rgb(82, 3, 23);
     /* font size */
-    --fs-h1: 3rem;
+    --fs-h1: 1rem;
     --fs-h2: 2.25rem;
     --fs-h3: 1.25rem;
     --fs-h4: 0.75rem;
@@ -30,8 +30,8 @@
 
 @media (min-width: 768px) {
     :root {
-        --fs-h1: 4.5rem;
-        --fs-h2: 3.75rem;
+        --fs-h1: 3rem;
+        --fs-h2: 2.5rem;
         --fs-h3: 1.5rem;
         --fs-body: 1.125rem;
     }
@@ -66,6 +66,7 @@ html, body {
     line-height: 1.6;
     height: 100%;
     width: 100%;
+    padding: .5em;
     /* background-image: url("/images/header.jpg");
     background-repeat: no-repeat, repeat;
     background-color: #cccccc;   
@@ -159,12 +160,16 @@ h3 {font-size: var(--fs-h3) }
     margin-bottom: .25rem;
     box-sizing: border-box;
 }
-.sectionTitle--intro {
-    font-weight: var(--fw-reg);
-}
 
 .sectionTitle--intro {
     display: block;
+    font-weight: var(--fw-reg);
+    top: 70%;
+    box-shadow: var(--bs);
+    padding: 1em;
+    font-size: var(--fs-h1);
+    color: var(--clr-dark);
+    background: rgba(60, 60, 60, 0.7);
 }
 
 .sectionSubtitle {
@@ -172,7 +177,6 @@ h3 {font-size: var(--fs-h3) }
     font-size: var(--fs-h3);
 }
 
-.sectionSubtitle--intro,
 .sectionSubtitle--about {
     background: var(--clr-accent);
     padding:  .25em 1em;
@@ -189,6 +193,7 @@ nav {
     min-height: 8vh;
     background-color: var(--clr-accent);
     font-family: var(--ff-primary);
+    opacity: .8;
 }
 
 .logo {
@@ -412,38 +417,24 @@ nav {
 /* Intro section */
 
 .intro {
-    background-color: var(--clr-light);
     background-size: cover;
     background-blend-mode: multiply;
     color: var(--clr-light);
     height: 100%;
     width: 100%;
+    background-image: url(/images/intro.jpg);
 }
 
-
-.introImg {
-    box-shadow: var(--bs);
-}
 
 @media (min-width: 600px) {
-    .intro {
+    /* .intro {
         display: grid;
         width: 100%;
         margin: 0 auto;
         grid-column-gap: 1em;
         grid-template-areas: "img title" "img subtitle";
         grid-template-columns: auto auto;
-    }
-
-    .introImg {
-        grid-area: img;
-        min-width: 250px;
-        position: relative;
-        z-index: 2;
-    }
-    .sectionTitle--intro {
-        top: 40%;
-    }
+    } */
 
     .sectionSubtitle--intro {
         align-self: start;
@@ -453,8 +444,9 @@ nav {
         position: relative;
         left: -1.5em;
         width: calc(100% + 1.5em);
+        font-size: 50px;
     }
-}
+} 
 
 /* Experience */
 
