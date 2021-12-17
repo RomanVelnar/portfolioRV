@@ -28,7 +28,7 @@
 
     /* Media query */
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
     :root {
         --fs-h1: 3rem;
         --fs-h2: 2.5rem;
@@ -244,7 +244,7 @@ nav {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     body {
         overflow-x: hidden;
     }
@@ -417,33 +417,19 @@ nav {
 /* Intro section */
 
 .intro {
-    background-size: cover;
-    background-blend-mode: multiply;
-    color: var(--clr-light);
-    height: 100%;
-    width: 100%;
     background-image: url(/images/intro.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    color: var(--clr-light);
 }
 
 
-@media (min-width: 600px) {
-    /* .intro {
-        display: grid;
-        width: 100%;
-        margin: 0 auto;
-        grid-column-gap: 1em;
-        grid-template-areas: "img title" "img subtitle";
-        grid-template-columns: auto auto;
-    } */
-
-    .sectionSubtitle--intro {
-        align-self: start;
-        grid-column: -1 / 1;
-        grid-row: 2;
-        text-align: right;
-        position: relative;
-        left: -1.5em;
-        width: calc(100% + 1.5em);
+@media (min-width: 767px) {
+    .intro {
+        background-size: none;
+    }
+    .sectionTitle--intro {
         font-size: 50px;
     }
 } 
@@ -507,7 +493,7 @@ nav {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 767px) {
     .expBoxBox {
         /* display: flex; */
         max-width: 1000px;
@@ -588,7 +574,7 @@ div .expBox .expBoxBox.active {
     top: 20%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
     .aboutMe {
         display: grid;
         grid-template-columns: 1fr 200px;
