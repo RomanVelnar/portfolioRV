@@ -311,9 +311,10 @@ nav {
 }
 
 
-@media (min-width: 767px) {
+@media only screen and (max-width: 767px) {
     .intro {
         background-size: none;
+        background-image: none;
     }
     .sectionTitle--intro {
         font-size: 50px;
@@ -567,8 +568,6 @@ div .expBox .expBoxBox.active {
 }
 
 .contactMain {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     margin: 5em;
 }
 
@@ -584,7 +583,6 @@ div .expBox .expBoxBox.active {
 }
 
 .contactCont2 {
-    max-width: 850px;
 	display: grid;
 	grid-template-columns: 2fr, 1fr;
 	justify-content: center;
